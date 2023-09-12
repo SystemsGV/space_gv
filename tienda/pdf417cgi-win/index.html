@@ -1,0 +1,331 @@
+<head>
+<title>PDF417 CGI Application</title>
+<meta name="description" content="PDF417 CGI Application" />
+<meta name="keywords" content="PDF417 CGI Application" />
+<STYLE type='text/css'>td {font-size:11px; font-family:Verdana,Arial; color:000000; font-weight:300; font-style:normal; text-decoration:none}</STYLE>
+</head>
+
+<body bgcolor="#FFFFFF">
+<br>
+<br>
+<table align="center" cellSpacing=0 cellPadding=2 width="95%" border="0">
+	<tr>
+		<td colspan=2><b>For more information please visit our main site <a href="http://www.barcodetools.com">www.BarcodeTools.com</a>.</b><br><br></td>
+	</tr>
+<!-- CGI -->
+	<tr bgcolor="#F3F3F5">
+		<td width=12><img src="images/ar1.gif" width="11" height="11" alt=""></td>
+		<td align="left"><b><a name="cgi">CGI</a></b></td>
+	</tr>
+	<tr>
+		<td width=12></td>
+		<td>
+<ul>
+<li>
+A CGI (Common Gateway Interface) Application is an application that a WWW server can execute. The easiest way to create barcodes 
+on your web server is to use a CGI application that generates barcodes. It is enough to install just one executable file on the server.
+<br>
+Embedding a barcode into an HTML page is as easy as using IMG tags.
+</li>
+<li>
+Our CGI applications are written in C++ and are executable files, which ensures higher speed and lower load for the web server. 
+<br>
+You can use our CGI applications both on the Windows platform and on Linux with either IIS or Apache servers.
+</li>
+<li>
+<a href="http://www.bcmaker.com">Here</a> you can test our barcode CGI applications online.
+</li>
+</ul>
+<br><br>
+		</td>
+	</tr>
+<!-- Using -->
+	<tr bgcolor="#F3F3F5">
+		<td width=12><img src="images/ar1.gif" width="11" height="11" alt=""></td>
+		<td align="left"><b><a name="using-cgi">Using the CGI application</a></b></td>
+	</tr>
+	<tr>
+		<td width=12></td>
+		<td>
+		Install the CGI application, see below.
+		<br>
+		You can use this application right after that. Enter the address of your barcode CGI application into the browser address bar and you should see the barcode image. 
+		<br>
+		You can see a sample DataMatrix barcode below.
+		<br><br>
+		<img src="images/barcode-cgi-done.gif" width=480 height=225 alt="Using Barcode CGI application">
+		<br><br>
+		You can specify parameters to customize the barcode. For example, use the <i>data</i> parameter to encode the string "HelloWorld" in DataMatrix.
+		<br><br>
+		http://localhost/test/dmtxcgi?<b>data=HelloWorld</b>
+		<br><br>
+		See the corresponding description for more detailed information about the parameters of the CGI application (click CGI in the menu to the left and then, for example, click DataMatrix).
+		<br><br>
+		You can use the barcode CGI generator in an IMG tag of your HTML page.
+		<br>
+		For example:
+		<blockquote style="background-color:#f0f0f0;">
+&lt;html&gt;<br>
+&lt;head&gt;<br>
+&lt;title&gt;Barcode CGI generator&lt;/title&gt;<br>
+&lt;body&gt;<br>
+&lt;h2&gt;Using Barcode CGI generator&lt;/h2&gt;<br>
+&lt;img src=&quot;<b>http://localhost/test/dmtxcgi?data=1234567&amp;w=120&amp;h=120</b>&quot; alt=&quot;&quot;&gt;<br>
+&lt;/body&gt;<br>
+&lt;/html&gt;
+		</blockquote>
+		You will see a page like the one shown below.
+		<br><br>
+		<img src="images/barcode-cgi-in-html.gif" width=480 height=271 alt="Using Barcode CGI application in the HTML IMG tag">
+		<br><br><br>
+		</td>
+	</tr>
+<!-- Linux setup -->
+	<tr bgcolor="#F3F3F5">
+		<td width=12><img src="images/ar1.gif" width="11" height="11" alt=""></td>
+		<td align="left"><b><a name="linux-setup">Installing the CGI application on a Linux (Apache) server</a></b></td>
+	</tr>
+	<tr>
+		<td width=12></td>
+		<td>
+		Download the necessary CGI application from our site:
+		<br>
+		<ul>
+		<li><a href="http://www.barcodetools.com/barcode/barcode-cgi/download-barcodecgi-application.html">Linear Barcodes</a></li>
+		<li><a href="http://www.barcodetools.com/datamatrix/datamatrix-cgi/download-datamatrix-cgi-application.html">DataMatrix</a></li>
+		<li><a href="http://www.barcodetools.com/pdf417/pdf417-cgi/download-pdf417-cgi-application.html">PDF417</a></li>
+		</ul>
+		<br>
+		Upload the CGI application (<i>dmtxcgi</i> file) in the binary mode to your server (for example, to the cgi-bin directory).
+		<br>
+		Set the execution permission (CHMOD) to 755, for example.
+		<br>
+		You can use the barcode CGI generator right after that. 
+		<br><br><br>
+		</td>
+	</tr>
+<!-- Windows setup -->
+	<tr bgcolor="#F3F3F5">
+		<td width=12><img src="images/ar1.gif" width="11" height="11" alt=""></td>
+		<td align="left"><b><a name="windows-setup">Installing the CGI application on a Windows (IIS) server</a></b></td>
+	</tr>
+	<tr>
+		<td width=12></td>
+		<td>
+		We will go through the installation of the barcode CGI generator onto the server IIS 6.0. 
+		Some variations are possible if you install it on other servers. Download the necessary CGI application from our site:
+		<br>
+		<ul>
+		<li><a href="http://www.barcodetools.com/barcode/barcode-cgi/download-barcodecgi-application.html">Linear Barcodes</a></li>
+		<li><a href="http://www.barcodetools.com/datamatrix/datamatrix-cgi/download-datamatrix-cgi-application.html">DataMatrix</a></li>
+		<li><a href="http://www.barcodetools.com/pdf417/pdf417-cgi/download-pdf417-cgi-application.html">PDF417</a></li>
+		</ul>
+		<br>
+		Create a Virtual Directory and copy the file of the CGI application (<i>dmtxcgi.exe</i> file) to it. 
+		Set "Execute permissions" in the properties of the Virtual Directory as shown in the picture below. It is 
+		better to use a separate folder for CGI applications.
+		<br><br>
+		<img src="images/iis6-cgi-permissions.gif" width=461 height=440 alt="Setup IIS 6.0 barcode execute permissions">
+		<br><br>
+		Set the security properties of the file as shown in the picture. The account the file of the CGI script will run under must have the Execute permission. 
+		See the picture below. If you do not do it, you will get the following error: 
+		<br>
+		<i>HTTP Error 401.3 - Unauthorized: Access is denied due to an ACL set on the requested resource.</i>
+		<br>
+		<img src="images/cgi-file-permissions.gif" width=367 height=502 alt="Setup CGI file execute permissions">
+		<br><br>
+		And the last. You must add CGI applications to the list of allowed "Web Service Extensions". If you do not do it, you will get error 404: 
+		<br>
+		<i>HTTP Error 404 - File or directory not found.</i>
+		<br><br>
+		To do it, start Internet Information Service (IIS) Manager, click "Web Service Extensions" and add the CGI application as shown in the picture.
+		<br>
+		<img src="images/add-barcode-cgi-ext.gif" width=550 height=309 alt="Add bar code CGI application into the IIS 6.0 Web Service Extensions">
+		<br><br>
+		Also, you can allow "All Unknown CGI Extensions", but we do not recommend that you do it for security reasons.
+		<blockquote>
+		You can also find information about installing CGI onto the Microsoft IIS server on the <a href="http://www.microsoft.com">Microsoft</a> site.
+		<br>
+		Configuring CGI Applications (IIS 6.0)
+		<br>
+		Installing CGI Applications in IIS 6.0 (IIS 6.0)
+		<br>
+		Configuring the Maximum Number of Concurrent CGI Requests (IIS 6.0)
+		<br>
+		Configuring CGI Application Timeouts (IIS 6.0)
+		<br>
+		</blockquote>
+		</td>
+	</tr>
+
+
+<!-- DPDF417 CGI params -->
+	<tr bgcolor="#F3F3F5">
+		<td width=12><img src="images/ar1.gif" width="11" height="11" alt=""></td>
+		<td align="left"><b><a name="pdf417-cgi-params">PDF417 CGI parameters</a></b></td>
+	</tr>
+	<tr>
+		<td width=12></td>
+		<td>
+Our barcode CGI generators understand both GET and POST requests.
+<br /><br />
+<table cellSpacing=1 cellPadding=4 border=0>
+	<tr bgcolor="#DFDFE5">
+		<td><b>Parameter Name</b></td>
+		<td><b>Description</b></td>
+		<td><b>Corresponding property of <a href="http://www.barcodetools.com/pdf417/pdf417-activex/properties.html">PDF417-ActiveX</a></b></td>
+		<td><b>Default value</b></td>
+	</tr>
+	<tr bgcolor="#F3F3F5">
+		<td>w</td>
+		<td>PDF417 picture width.</td>
+		<td></td>
+		<td>200</td>
+	</tr>
+	<tr bgcolor="#F3F3F5">
+		<td>h</td>
+		<td>PDF417 picture height.</td>
+		<td></td>
+		<td>100</td>
+	</tr>
+	<tr bgcolor="#F3F3F5">
+		<td>xdim</td>
+		<td>PDF417 X-Dimension.</td>
+		<td>This parameter makes sense only if the <i>w</i> and <i>h</i> parameters are not used.</td>
+		<td>2</td>
+	</tr>
+	<tr bgcolor="#F3F3F5">
+		<td>data</td>
+		<td>Sets the data that is to be encoded in the PDF417.</td>
+		<td><a href="http://www.barcodetools.com/pdf417/pdf417-activex/properties.html#DataToEncode">DataToEncode</a></td>
+		<td>1234567</td>
+	</tr>
+	<tr bgcolor="#F3F3F5">
+		<td>cmode</td>
+		<td>PDF417 Compaction mode.<br />Possible values: 0...3</td>
+		<td><a href="http://www.barcodetools.com/pdf417/pdf417-activex/properties.html#CompactionMode">CompactionMode</a></td>
+		<td>0</td>
+	</tr>
+	<tr bgcolor="#F3F3F5">
+		<td>ecl</td>
+		<td>PDF417 Error Correction Level.<br />Possible values: 0...9</td>
+		<td><a href="http://www.barcodetools.com/pdf417/pdf417-activex/properties.html#ErrorCorrectionLevel">ErrorCorrectionLevel</a></td>
+		<td>9</td>
+	</tr>
+	<tr bgcolor="#F3F3F5">
+		<td>col</td>
+		<td>Data Columns.<br />Possible values: 0(auto)...30</td>
+		<td><a href="http://www.barcodetools.com/pdf417/pdf417-activex/properties.html#DataColumns">DataColumns</a></td>
+		<td>3</td>
+	</tr>
+	<tr bgcolor="#F3F3F5">
+		<td>row</td>
+		<td>Data Rows.<br />Possible values: 0(auto), 3...90</td>
+		<td><a href="http://www.barcodetools.com/pdf417/pdf417-activex/properties.html#DataRows">DataRows</a></td>
+		<td>0</td>
+	</tr>
+	<tr bgcolor="#F3F3F5">
+		<td>cpdf</td>
+		<td>Compact PDF.<br />Possible values: 0(normal PDF417) or 1(compact)</td>
+		<td><a href="http://www.barcodetools.com/pdf417/pdf417-activex/properties.html#CompactPDF">CompactPDF</a></td>
+		<td>1</td>
+	</tr>
+	<tr bgcolor="#F3F3F5">
+		<td>angle</td>
+		<td>Orientation of the PDF417 bar code.<br />Possible values: 0, 90, 180, 270</td>
+		<td><a href="http://www.barcodetools.com/pdf417/pdf417-activex/properties.html#Orientation">Orientation</a></td>
+		<td>0</td>
+	</tr>
+	<tr bgcolor="#F3F3F5">
+		<td>quiet</td>
+		<td>Show quiet zones.<br />Possible values: 0(hide) or 1(show)</td>
+		<td><a href="http://www.barcodetools.com/pdf417/pdf417-activex/properties.html#QuietZone">QuietZone</a></td>
+		<td>1</td>
+	</tr>
+	<tr bgcolor="#F3F3F5">
+		<td>alignh</td>
+		<td>Horizontal barcode alignment.<br />Possible values: 0...3</td>
+		<td><a href="http://www.barcodetools.com/pdf417/pdf417-activex/properties.html#AlignH">AlignH</a></td>
+		<td>1</td>
+	</tr>
+	<tr bgcolor="#F3F3F5">
+		<td>alignv</td>
+		<td>Vertical barcode alignment.<br />Possible values: 0...3</td>
+		<td><a href="http://www.barcodetools.com/pdf417/pdf417-activex/properties.html#AlignV">AlignV</a></td>
+		<td>1</td>
+	</tr>
+	<tr bgcolor="#F3F3F5">
+		<td>bcolor</td>
+		<td>Background color.<br />Possible values: 000000...ffffff
+		<br />
+		The color must be presented as RGB, i.e. you should specify the value ff0000 for the red color.
+		</td>
+		<td><a href="http://www.barcodetools.com/pdf417/pdf417-activex/properties.html#BackColor">BackColor</a></td>
+		<td>ffffff (white)</td>
+	</tr>
+	<tr bgcolor="#F3F3F5">
+		<td>fcolor</td>
+		<td>Foreground color.<br />Possible values: 000000...ffffff</td>
+		<td><a href="http://www.barcodetools.com/pdf417/pdf417-activex/properties.html#ForeColor">ForeColor</a></td>
+		<td>000000 (black)</td>
+	</tr>
+	<tr bgcolor="#F3F3F5">
+		<td>y2x</td>
+		<td>PDF417 Y to X Ratio.</td>
+		<td><a href="http://www.barcodetools.com/pdf417/pdf417-activex/properties.html#Y2XRatio">Y2XRatio</a></td>
+		<td>4.0</td>
+	</tr>
+	<tr bgcolor="#F3F3F5">
+		<td>help</td>
+		<td>Displays information about our PDF417 CGI generator. See below.</td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr bgcolor="#F3F3F5">
+		<td>debug</td>
+		<td>Displays information about the error. See below.</td>
+		<td></td>
+		<td></td>
+	</tr>
+</table>
+		<br /><br />
+		</td>
+	</tr>
+<!-- PDF417 CGI examples -->
+	<tr bgcolor="#F3F3F5">
+		<td width=12><img src="images/ar1.gif" width="11" height="11" alt=""></td>
+		<td align="left"><b><a name="pdf417-cgi-examples">Examples</a></b></td>
+	</tr>
+	<tr>
+		<td width=12></td>
+		<td>
+		If you specify the following parameters:
+		<br /><br />
+		<font color="#707070">http://localhost/test/pdf417cgi.exe?data=HelloWorld&amp;xdim=2&amp;bcolor=ffff00&amp;fcolor=0000ff</font>
+		<br /><br />
+		"HelloWorld" will be encoded in the PDF417 barcode, the x-dimension is 2 pixels, the background color is yellow, 
+		the foreground color is blue. See the picture below.
+		<br /><br />
+		<img src="images/pdf417-cgi-params.gif" width=480 height=228 alt="Using PDF417 CGI barcode generator">
+		<br /><br /><br />
+		To get information about the PDF417 CGI application (and also the license information), just specify the parameter <i>help</i>:
+		<br /><br />
+		<font color="#707070">http://localhost/test/pdf417cgi.exe?help=1</font>
+		<br /><br /><br />
+		If the web server returns an error for some reason (for example, a <i>CGI Error</i> for a Windows server or an <i>Internal Server Error for Linux</i>), 
+		you may have specified some parameters incorrectly. Try specifying the parameters as shown below and you will get such an error.
+		<br /><br />
+		<font color="#707070">http://localhost/test/pdf417cgi.exe?data=HelloWorld&amp;w=1</font>
+		<br /><br />
+		As you can see, the width of the PDF417 image is set to 1 pixel. Of course, a PDF417 barcode image cannot have this size. To get debugging information, 
+		add the parameter <i>debug</i> and you will see an error message:
+		<br /><br />
+		<font color="#707070">http://localhost/test/pdf417cgi.exe?data=HelloWorld&amp;w=1&amp;debug=1</font>
+		<br /><br />
+		<img src="images/pdf417-cgi-error.gif" width=480 height=228 alt="Using PDF417 CGI barcode generator with debug information.">
+		</td>
+	</tr>
+</table>
+
+</body>
+</html>

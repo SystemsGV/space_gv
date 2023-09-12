@@ -1,0 +1,211 @@
+<style>
+.txt_form14 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #630;
+}
+.txt_form12 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #333;
+}
+.txt_form12 a {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	text-decoration: none;
+	color: #333;
+}
+.txt_form12 a:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	text-decoration: none;
+	color: #333;
+}
+
+.Estilo1 {
+	color: #000000;
+	font-weight: bold;
+}
+.Estilo2 {
+	color: #663317;
+	font-size: 13px;
+	line-height:18px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+</style>
+<script language="javascript">
+	function Valida_Datos()
+	{
+		if (document.form_login.txt_usuario.value.length == 0)
+		{	
+			alert("Ingrese el Nombre del Usuario");
+			document.form_login.txt_usuario.focus();
+			return;
+		}
+		if (document.form_login.txt_psw1.value.length == 0)
+		{	
+			alert("Ingrese su Clave");
+			document.form_login.txt_psw1.focus();
+			return;
+		}
+		document.form_login.submit();	
+	}
+	
+function iSubmitEnter(oEvento, oFormulario){ 
+     var iAscii; 
+
+     if (oEvento.keyCode) 
+         iAscii = oEvento.keyCode; 
+     else if (oEvento.which) 
+         iAscii = oEvento.which; 
+     else 
+         return false; 
+
+     if (iAscii == 13) oFormulario.submit(); 
+
+     return true; 
+} 
+//--> 
+	
+</script>
+
+<div id="filter"></div>
+<div id="box">
+	<span id="boxtitle"></span>
+    
+    <table width="743" height="450" align="center" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+    <!--<td width="459" height="334" background="iconos/bg_form2.png">-->
+        <td width="459" height="334" background="iconos/bg_form2.png">
+    <div align="justify" class="txt_form12 Estilo2" style="padding:2px 25px 2px 25px;">
+    <b>CLUB DE LA GRANJITA</b>
+    <br/>
+    <b>Beneficios de socio*:</b>
+    <br/>
+    <ul>
+    	<li>Membres&iacute;a v&aacute;lida por un a&ntilde;o.</li>
+        <li>Gratis una Pulsera M&aacute;gica para el titular por su cumplea&ntilde;os. Cuentas con 6 d&iacute;as antes, 6 d&iacute;as despu&eacute;s o el mismo d&iacute;a del cumplea&ntilde;os para hacer v&aacute;lido este beneficio (el carn&eacute; debe estar vigente o haberlo adquirido/renovado m&iacute;nimo 48 horas antes de la visita)<b>*</b></li>
+        <li>Por tu inscripci&oacute;n como socio nuevo GRATIS un vale sorpresa.</li>
+        <li>Con tu n&uacute;mero de socio ingresa a la web (Club Granjita) e imprime tus vales de descuentos (tomar en cuenta todas las indicaciones del cup&oacute;n).</li>
+        <li>Gratis <b>*</b>otra pulsera m&aacute;gica para asistir a una de nuestras semanas de socio. De acuerdo a su n&uacute;mero m&aacute;gico podr&aacute; obtener una cortes&iacute;a para visitar uno de nuestros parques en una de las 4 semanas dedicado a nuestros afiliados.</li>
+        <li>Los beneficios son &uacute;nicamente para el titular de la membres&iacute;a y rigen 48 horas despu&eacute;s de realizada la afiliaci&oacute;n y/o renovaci&oacute;n.</li>
+        <li>(*) Obligatorio presentar carn&eacute; f&iacute;sico y vigente m&aacute;s el DNI.</li>
+        <li>(*) La membres&iacute;a puede adquirirse para ni&ntilde;os y adultos. Si tu carn&eacute; venci&oacute;, est&aacute; por vencer o se perdi&oacute; puedes renovarlo comprando una nueva ficha de socio. Costo afiliaci&oacute;n, renovaci&oacute;n o duplicado S/. 20.00.</li>
+   </ul>
+   <b>*</b>Granja Villa Chorrillos.
+   <i>
+   </div>    
+   </td>
+    <td width="30"></td>
+    <td width="254">
+    
+    	<table border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+        <td colspan="3" height="10" background="iconos/borde1top.gif"></td>
+        </tr>
+        <tr>
+        <td width="10" background="iconos/borde1iz.gif"></td>
+        <td height="314" width="234" background="iconos/bg_login.jpg" height="174">
+            <table border="0" align="center" cellpadding="0" cellspacing="0">
+              <tr>
+                <td width="109" height="28" class="txt_form14">&nbsp;</td>
+                <td width="29"></td>
+                <td width="76" align="right" valign="top" class="txt_form12"><!-- <input type="button"  onclick="javascript:closebox()" value="Cancelar" style="background-color:#E8DBC5 "/> -->
+                  <a href="javascript:closebox();"><b>X <u>CERRAR</u></b></a></td>
+              </tr>
+            </table>
+            <table width="212" border="0" align="center" cellpadding="0" cellspacing="0">
+            <form method="post" action="proc_login.php" target="_parent" name="form_login">
+            <tr>
+              <td width="2"></td>
+              <td width="204" class="txt_form14">Ingrese sus datos y contrase&ntilde;a</td>
+              <td width="2"></td>
+            </tr>
+            <tr>
+            <td width="2" height="7"></td>
+            <td width="204" class="txt_form14"></td>
+            <td width="2"></td>
+            </tr>
+             <tr>
+            <td width="2"></td>
+            <td width="204" class="txt_form14"><b>Local de Afiliaci&oacute;n:</b></td>
+            <td width="2"></td>
+            </tr>
+            <tr>
+            <td width="2"></td>
+            <td width="204" class="txt_form12" align="left"><input type="radio" name="local" value="1" checked="checked" />Sur&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--<input type="radio" name="local" value="2" />Norte</td>
+            <td width="2"></td>-->
+            </tr>
+            <tr>
+            <td colspan="3" height="7"></td>
+            </tr>
+            <tr>
+            <td width="2"></td>
+            <td width="204" class="txt_form14"><b>Usuario</b>(Numero de tarjeta):</td>
+            <td width="2"></td>
+            </tr>
+            <tr>
+            <td colspan="3" height="2"></td>
+            </tr>
+            <tr>
+            <td width="2"></td>
+            <td width="204"><input type="text" name="txt_usuario" style="height:23px; width:205px; color: #6B2800; font-size:14px; line-height:16px;" onkeypress="iSubmitEnter(event, document.form_login)"></td>
+            <td width="2"></td>
+            </tr>
+            <tr>
+            <td colspan="3" height="7"></td>
+            </tr>
+            <tr>
+            <td width="2"></td>
+            <td width="204" class="txt_form14"><b>Fecha de Nacimiento:</b></td>
+            <td width="2"></td>
+            </tr>
+            <tr>
+            <td colspan="3" height="3"></td>
+            </tr>
+            <tr>
+            <td width="2"></td>
+            <td width="204" class="txt_form12" align="right"><span class="Estilo1">Dia:</span>&nbsp;&nbsp;
+              <input name="txt_psw1" type="text" id="txt_psw1" style="height:23px; width:100px;" onkeypress="iSubmitEnter(event, document.form_login)" /><br><br>
+              <span class="Estilo1">Mes:</span>&nbsp;&nbsp;<input name="txt_psw2" type="text" id="txt_psw2" style="height:23px;width:100px; color: #6B2800; font-size:14px;" onkeypress="iSubmitEnter(event, document.form_login)" /><br><br>
+              <span class="Estilo1">A&ntilde;o:</span>&nbsp;&nbsp;<input name="txt_psw3" type="text" id="txt_psw3" style="height:23px;width:100px; color: #6B2800; font-size:14px;" onkeypress="iSubmitEnter(event, document.form_login)" /></td>
+            <td width="2"></td>
+            </tr>
+            <tr>
+            <td colspan="3" height="5"></td>
+            </tr>
+            <tr>
+            <td width="2"></td>
+            <td width="204" align="left">
+                <table border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                <td width="109" class="txt_form14">&nbsp;</td>
+                <td width="18"></td>
+                <td width="77" align="center" class="txt_form14"><strong>&gt;&gt; </strong><a href="javascript:Valida_Datos();" class="txt_form14"><strong>INGRESAR</strong></a></td>
+                </tr>
+                </table>
+            </td>
+            <td width="2"></td>
+            </tr>
+            <tr>
+            <td colspan="3" height="15"></td>
+            </tr>
+            </form>
+            </table>
+        </td>
+        <td width="10" background="iconos/borde1de.gif"></td>
+        </tr>
+        <tr>
+        <td colspan="3" height="10" background="iconos/borde2aba.gif"></td>
+        </tr>
+        </table>
+    
+    </td>
+    </tr>
+    </table>
+	
+</div>

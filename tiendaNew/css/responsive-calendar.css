@@ -1,0 +1,110 @@
+/*.responsive-calendar  {
+  background: red;    
+}*/
+.responsive-calendar .txtYear {
+  font-size: 26pt;
+  font-weight: bold;
+  text-transform: uppercase;    
+    margin: 0px;
+    padding: 0px;
+    color: #004c7b;
+}
+.responsive-calendar .controls {
+  text-align: center;    
+    padding: 10px 0px 10px 0px;
+}
+.responsive-calendar .controls a {
+  cursor: pointer;
+}
+.responsive-calendar .controls h4 {
+ /* display: inline;*/
+}
+.responsive-calendar .controls span{
+  /*font-size: 22pt;*/
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #004c7b;
+}
+.responsive-calendar .day-headers,
+.responsive-calendar .days {
+  font-size: 0;
+}
+.responsive-calendar .day {
+  display: inline-block;
+  position: relative;
+  font-size: 14px;
+  width: 14.285714285714286%;
+  text-align: center;    
+}
+.responsive-calendar .active{
+ border: 0px solid red;
+}
+.responsive-calendar .day a {
+  color: #000000;
+  display: block;
+  cursor: pointer;
+  padding: 20% 0 20% 0;
+  border: 1px solid #ccc;
+  margin: 1px;
+  -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
+}
+.responsive-calendar .day a:hover {
+  /*background-color: #eee;*/
+  text-decoration: none;
+  cursor: default;
+}
+.responsive-calendar .day.header {
+  border-bottom: 1px #004c7b solid;
+  background: #36a0e2;
+  line-height: 50px;
+  color: aliceblue;  
+}
+.responsive-calendar .day.active a {
+  /*background-color: #1d86c8;
+  color: #ffffff;*/
+    background: #f0f6e9;
+    font-weight: bold;
+}
+.responsive-calendar .day.active a:hover,.responsive-calendar .day.active a:focus {
+  /*background-color: #36a0e2;*/
+    text-decoration: none;
+    cursor: pointer;
+}
+.responsive-calendar .day.select a {
+  background-color: #aecbc0;
+  
+}
+.responsive-calendar .day.active .not-current {
+  background-color: #8fcaef;
+  color: #ffffff;
+}
+.responsive-calendar .day.active .not-current:hover {
+  background-color: #bcdff5;
+}
+.responsive-calendar .day.not-current a {
+  color: #ddd;
+    visibility: hidden;
+}
+.responsive-calendar .day .badge {
+ /* position: absolute;
+  top: 2px;
+  right: 2px;*/
+  position: absolute;
+  top: 4px;
+  right: 4px;  
+  text-align: right;
+  font-size: 11px;
+background: transparent;
+  color:#268800;
+  padding: 0px;    
+  
+}
+/*.responsive-calendar .day .badge {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  z-index: 1;  
+}*/
