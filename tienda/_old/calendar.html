@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="description" content="dodolan manuk responsive catalog themes built with twitter bootstrap">
+    <meta name="keywords" content="responsive, catalog, cart, themes, twitter bootstrap, bootstrap">
+    <meta name="author" content="afriq yasin ramadhan">
+    <link rel="shortcut icon" href="img/favicon.html">
+    <title>.: La Granja Villa :.</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">    
+    <link href="css/responsive.css" rel="stylesheet">
+    <link href="css/responsive-calendar.css" rel="stylesheet">    
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+<!-- header -->
+<header class="masthead">
+  <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          
+        </div>
+        <div class="col-md-4">
+          
+        </div>
+        <div class="col-md-4 text-right">
+          <i class="fa fa-shopping-cart"></i> ENTRADAS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-user"></i> CLUB GRANJA
+        </div>
+      </div>
+  </div>
+</header>
+<!-- end header-->      
+<!-- navbar -->
+  <nav class="navbar navbar-default navbar-static" role="navigation" id="nav">
+      <div class="container">        
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand visible-xs" href="#"><!--<img src="img/logo.png" width="40" >--></a>
+        </div>        
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        	<ul class="nav navbar-nav nav-left">
+			  <li class="active"><a href="#">ORGANIZACIÓN</a></li>
+			  <li><a href="#">SERVICIOS</a></li>
+			  <li><a href="#">ATRACCIONES</a></li>
+			</ul>
+			<a href="#" class="logo visible-lg visible-md"><img src="img/logo.png"></a>
+			<div id="brand" class="visible-lg visible-md">&nbsp;</div>
+			<ul class="nav navbar-nav nav-right">
+			  <li><a href="#">INSTALACIONES</a></li>
+			  <li><a href="#">PROMOCIONES</a></li>
+              <li><a href="#">CONTACTO</a></li>			  
+			</ul>          
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+  </nav>
+<!-- /navbar -->    
+<div id="home">
+      <div id="home-slider" class="carousel slide carousel-fade" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="item active" style="background: url(img/slider/01.jpg);"></div>
+          <div class="item" style="background: url(img/slider/02.jpg);"></div>
+          <div class="item" style="background: url(img/slider/03.jpg);"></div>
+        </div>
+        <a class="left carousel-control" href="#home-slider" data-slide="prev"><i class="fa fa-angle-left"></i></a>
+        <a class="right carousel-control" href="#home-slider" data-slide="next"><i class="fa fa-angle-right"></i></a>
+        <div class="pattern"></div>
+      </div>
+</div>    
+<div class="container module-opt">      
+    <div class="row container">
+      <div class="col-md-7">
+        <div class="responsive-calendar">
+          <div class="controls">
+            <a class="pull-left" data-go="prev"><div class="btn btn-primary">Anterior</div></a>
+            <h4><span data-head-year></span> <span data-head-month></span></h4>
+            <a class="pull-right" data-go="next"><div class="btn btn-primary">Siguiente</div></a>
+          </div><hr/>
+          <div class="day-headers">
+            <div class="day header">Lun</div>
+            <div class="day header">Mar</div>
+            <div class="day header">Mie</div>
+            <div class="day header">Jue</div>
+            <div class="day header">Vie</div>
+            <div class="day header">Sab</div>
+            <div class="day header">Dom</div>
+          </div>
+          <div class="days" data-group="days"></div>
+        </div>  
+      </div>
+      <div class="col-md-5 module-info">
+        <br>
+        <h4>ADMISIÓN GENERAL DE LUNES A VIERNES</h4>
+        <hr>        
+        <img src="img/calendarios/01.jpg" class="img-responsive">
+        <br>
+        <p class="text-justify">
+        Después de pagar tu “Experiencia V.I.P.” y entrar al parque deberás presentar tu boleto de compra en el Centro de Activación, ubicado frente al juego Fiesta de las Tazas en el Pueblo Mexicano, en ese momento se te colocara un brazalete, el cual deberás de mostrar en todos los Juegos Mecánicos y Teatros para obtener acceso.
+        </p>
+        <br><br>
+        <div class="box box-primary">        
+        <!-- form start -->
+          <form role="form">
+            <div class="box-body">
+              <div class="box box-danger">
+                <div class="box-body">
+                  <div class="row form-group">
+                      <label for="inputEmail3" class="col-sm-2 control-label">Precio</label>
+                      <div class="col-sm-4">
+                        <input type="email" class="form-control" id="inputEmail3" placeholder="18.00">
+                      </div>
+                      <label for="inputEmail3" class="col-sm-2 control-label">Cantidad</label>
+                      <div class="col-sm-4">
+                        <input type="email" class="form-control" id="inputEmail3" placeholder="0">
+                      </div>
+                  </div>
+                </div>
+              </div>
+                                      
+            </div><!-- /.box-body -->
+            <div class="box-footer"><br><br>
+              <button type="submit" class="btn btn-primary">Añadir Carrito</button>
+              <br><br>
+            </div>
+          </form>
+        </div><!-- /.box -->                  
+      </div>
+    </div> 
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div id="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					
+				</div>
+			</div>
+		</div>
+</div>
+	<!-- end:footer -->
+	
+	<!-- begin:copyright -->
+	<div id="copyright">
+		<div class="container">
+			<div class="row">
+                <div class="col-md-4">
+                    
+                </div>
+                <div class="col-md-4 center-md">
+                    <small>Copyright &copy; 2015 La Granja Villa. Todos los derechos reservados.</small>
+                </div>
+				<div class="col-md-4">
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end:copyright -->
+<style>
+.circular {
+  width: 298px;
+  height: 224px;
+  border-radius: 150px;
+  -webkit-border-radius: 150px;
+  -moz-border-radius: 150px;
+  
+  }
+header{
+    background: #6d3b00;
+    z-index: 503;
+    position: relative;
+    color: aliceblue;
+    line-height: 40px;
+}
+.masthead .col-md-4 i{
+    color:#28b414    
+}
+.masthead .col-md-4 {
+    color:#ffd311
+}
+    
+#nav.affix {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index:10;
+}
+.module-info{
+  border:0px solid red;
+  -webkit-box-shadow: -2px 6px 21px -2px rgba(0,0,0,0.75);
+  -moz-box-shadow: -2px 6px 21px -2px rgba(0,0,0,0.75);
+  box-shadow: -2px 6px 21px -2px rgba(0,0,0,0.75);
+}
+.module-opt{
+    /*background: red;
+    position: relative;
+    margin-top: -60px;
+    z-index: 603;    */
+    margin-top: 60px;
+}
+.module-opt .col-md-3{
+    /*background: green;
+    margin: 0px;
+    padding: 0px;
+    padding-left: 30px;
+    padding: 30px;*/
+}
+.module-opt .col-md-3:first-child{
+    /*padding: 0px;*/
+    padding-left: 15px;
+}
+.module-opt .caption{
+    /*background:#1d1d1d;*/
+    color:#d1d1d1;
+}
+
+.module-opt .caption h3{
+    /*background: #ffcccc;*/
+    color: #505050;
+}
+.module-opt .caption p{
+    color: #858585
+}
+    
+.module-opt .thumbnail span{
+    background: yellow;
+    display: inline-block;
+    padding: 10px;
+    position: absolute;
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+.module-opt .thumbnail{
+  /*background: red;*/
+}
+.module-opt .thumbnail img{
+border-radius: 150px;
+  -webkit-border-radius: 150px;
+  -moz-border-radius: 150px;<div class="circular"></div><div class="circular"></div>
+border: 0px solid #000000;
+}
+
+.module-opt .thumbnail{
+    border: 0px solid red;
+    /*-webkit-box-shadow: 0px 2px 18px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 18px -1px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 18px -1px rgba(0,0,0,0.75);*/
+    
+}
+   
+    </style>    
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/responsive-calendar.min.js"></script>	    
+    <script src="js/script.js"></script>   
+    <script>
+    $(document).ready(function () {
+       $('#nav').affix({offset: {top: $('header').height()}});
+       $(".responsive-calendar").responsiveCalendar({
+        time: '2015-08',
+        events: {
+          "2015-08-30": {"number": 5, "badgeClass": "badge-warning", "url": "http://w3widgets.com/responsive-slider"},
+          "2015-08-26": {"number": 1, "badgeClass": "badge-warning", "url": "http://w3widgets.com"}, 
+          "2015-08-03": {"number": 1, "badgeClass": "badge-error"}, 
+          "2015-08-12": {"class": "active cool"}}
+      });
+    });
+    </script>
+  </body>
+</html>

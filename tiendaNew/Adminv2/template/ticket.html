@@ -1,0 +1,286 @@
+<style>
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+
+
+body{
+
+
+
+    font-family: 'Open Sans', sans-serif;
+
+
+
+    font-size: 10px;
+
+
+
+
+
+
+
+}
+
+
+
+h4,h3,h2{
+
+
+
+    margin: 0px;
+
+
+
+}
+
+
+
+p{
+
+
+
+    margin: 0px;
+
+
+
+    font-size: 12px;
+
+
+
+}
+
+
+
+.cuadro{
+
+
+
+    width: 700px;
+
+
+
+    
+
+
+
+    margin: 0px auto;
+
+
+
+    /*border: 1px solid #fce803;
+
+
+
+    border: 1px solid #e74c3c;*/
+
+
+
+    border: 2px solid #001206;
+
+
+
+}
+
+
+
+.redondo{
+
+
+
+    border-radius: 10px 10px 10px 10px;
+
+
+
+-moz-border-radius: 10px 10px 10px 10px;
+
+
+
+-webkit-border-radius: 10px 10px 10px 10px;
+
+
+
+}
+
+
+
+.main-head{
+
+
+
+    background: #fce803;
+
+
+
+    border-radius: 10px 10px 0px 0px;
+
+
+
+-moz-border-radius: 10px 10px 0px 0px;
+
+
+
+-webkit-border-radius: 10px 10px 0px 0px;
+
+
+
+border-bottom: 2px solid #001206;
+
+
+
+}
+
+
+
+.main-body{
+
+
+
+    padding: 10px;
+
+
+
+}
+
+
+
+</style>
+
+
+
+
+
+
+
+<div class="cuadro redondo">
+
+
+
+    <div class="main-head" style="background:#CCCCCC;" align="center"><br><h1 style="font-size:22px;"><strong>LA GRANJA VILLA Y SU MUNDO MAGICO</strong></h1><h3><strong>TICKET DE INGRESO</strong></h3><br></div>
+
+
+
+    <div class="main-body">
+
+
+
+        <table width="100%">
+
+
+
+            <tr>
+
+
+
+                <td width="32%" valign="top">
+
+
+
+                  <h3>APELLIDOS Y NOMBRES</h3>
+
+
+
+                    <p>{beneficiado}</p>
+
+				<br>
+
+                    <h3>DNI</h3>
+
+
+
+                    <p>{dni}</p>
+
+				<br>
+
+                    <h3>COMPRADOR</h3>
+
+
+
+                    <p>{comprador}</p>
+
+
+
+                </td>
+
+
+
+          <td width="25%" valign="top">
+
+
+
+            <h3>TIPO</h3>
+
+
+
+                    <p>{tentrada}</p>
+
+		<br>
+
+            <h3>NRO TICKET</h3>
+
+
+
+                    <p>{nro}</p>
+
+		<br>
+
+                    <h3>SEDE</h3>
+
+
+
+                    <p>{sede}</p>
+
+
+
+                </td>
+
+
+
+  <td width="43%" align="right">                    
+
+
+
+                    <img src="http://generator.barcodetools.com/barcode.png?gen=0&data={datacode}&col=4&row=8&bcolor=FFFFFF&fcolor=000000&y2x=4.0&xdim=2&w=&h=&cmode=0&ecl=9&cpdf=0&angle=0&quiet=1&alignh=1&alignv=1">
+
+
+
+                    <BR>
+
+<br>
+
+
+
+                    <h3>FECHA ENTRADA</h3>
+
+
+
+                    <p>{fconsumo}</p>
+
+
+
+                </td>                
+
+
+
+          </tr>
+
+
+
+        </table>
+
+
+
+    </div>
+
+
+
+</div>
+
+<br />
+		<br />
+        
+        {terminos}
+
+
