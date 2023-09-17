@@ -48,11 +48,12 @@
 
 							<ul class="navigation left-nav" style="border:#ffffff 1px solid; height:40px; padding-top:5px; background-color:green;">
 
-								<li><a href="https://www.lagranjavilla.com/organizacion.php">Organizaci&oacute;n</a></li>
+							<!--	<li><a href="https://www.lagranjavilla.com/organizacion.php">Organizaci&oacute;n</a></li>-->
 
                                 <li><a href="https://www.lagranjavilla.com/servicios.html">Servicios</a></li>
                     
                                 <li class='current'><a class='current' href="https://www.lagranjavilla.com/atracciones">Atracciones</a></li>
+                                <li><a href="https://www.lagranjavilla.com/instalaciones.html">Instalaciones</a></li>
 
 							</ul>
 
@@ -68,10 +69,10 @@
 
 							<ul class="navigation right-nav" style="border:#ffffff 1px solid; height:40px; padding-top:5px; background-color:green;">
 
-								<li><a href="https://www.lagranjavilla.com/instalaciones.html">Instalaciones</a></li>
+								
 
                                 <li><a href="https://www.lagranjavilla.com/promociones/">Promociones</a></li>
-                    
+                    	<li><a href="https://sites.google.com/view/mapagv/p%C3%A1gina-principal">Mapa Granja Villa</a></li>
                                 <li><a href="https://lagranjavilla.com/contactos.html">Cont&aacute;cto</a></li>					
 
 							</ul>

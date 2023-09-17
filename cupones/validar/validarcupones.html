@@ -1,0 +1,27 @@
+<!DOCTYPE html>  
+<html>  
+<head>   <title>CRITICO</title>  
+</head>  
+<body>  
+    <table>
+        <tr>
+            <th>title</th>
+            <th>body</th>
+        </tr>
+        <tr>
+            <?php     
+            $con=mysqli_connect('127.0.0.1','root','password','blog') or die ('Error en la conexion');  
+            $sql="SELECT * FROM posts";  
+            $resultado=mysqli_query($con,$sql) or die ('Error en el query database');  
+            while($fila = $resultado->fetch_assoc())
+            {
+                echo ("<td>".$fila["title"]."</td>");
+                echo ("<td>".$fila["body"]."</td>");
+            }
+
+            ?>  
+        </tr>
+    </table>
+
+</body>  
+</html>

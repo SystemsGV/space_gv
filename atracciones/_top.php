@@ -34,7 +34,7 @@
 
 <div id="page">
 
-	<header id="header">
+	<header id="header"><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
 
 		<div class="container">
 
@@ -48,7 +48,7 @@
 
 							<ul class="navigation left-nav" style="border:#ffffff 1px solid; height:40px; padding-top:5px; background-color:green;">
 
-								<li><a href="http://www.lagranjavilla.com/organizacion.php">Organizaci&oacute;n</a></li>
+							<!--<li><a href="http://www.lagranjavilla.com/organizacion.php">Organizaci&oacute;n</a></li>-->
 
                                 <li><a href="http://www.lagranjavilla.com/servicios.php">Servicios</a></li>
                     

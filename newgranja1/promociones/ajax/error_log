@@ -1,6 +1,0 @@
-[12-Jun-2019 14:17:14 America/Lima] PHP Warning:  include(constantes.php): failed to open stream: No such file or directory in /home/lagranja/public_html/promociones/ajax/ajax_comprobar_nick.php on line 3
-[12-Jun-2019 14:17:14 America/Lima] PHP Warning:  include(constantes.php): failed to open stream: No such file or directory in /home/lagranja/public_html/promociones/ajax/ajax_comprobar_nick.php on line 3
-[12-Jun-2019 14:17:14 America/Lima] PHP Warning:  include(): Failed opening 'constantes.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/lagranja/public_html/promociones/ajax/ajax_comprobar_nick.php on line 3
-[12-Jun-2019 14:17:14 America/Lima] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/lagranja/public_html/promociones/ajax/ajax_comprobar_nick.php on line 6
-[12-Jun-2019 14:17:14 America/Lima] PHP Warning:  mysql_query(): A link to the server could not be established in /home/lagranja/public_html/promociones/ajax/ajax_comprobar_nick.php on line 6
-[12-Jun-2019 14:17:14 America/Lima] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/lagranja/public_html/promociones/ajax/ajax_comprobar_nick.php on line 7
