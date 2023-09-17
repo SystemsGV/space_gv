@@ -3,49 +3,50 @@
 //include("inc.var.php");
 include("modelo.php");
 session_start();
-if(isset($_SESSION['session_socio'])){
-	$id=$_SESSION['session_socio'];
-	$idfnac=$_SESSION['session_sociofnac'];
-	$idtarjeta=$_SESSION['session_tarjeta'];
-	//$socio = new cls_emp_socio($id);
+if (isset($_SESSION['session_socio'])) {
+    $id = $_SESSION['session_socio'];
+    $idfnac = $_SESSION['session_sociofnac'];
+    $idtarjeta = $_SESSION['session_tarjeta'];
+    //$socio = new cls_emp_socio($id);
 
-	$sql="SELECT c.cClieCode,c.sClieApel,t.nTarjNumb,c.sClieName,c.sClieAddr,c.sClieTelf,c.sClieMail,c.dNacmDate FROM CLIENTE AS c, TARJETA AS t WHERE c.cClieCode=t.cClieCode AND t.nTarjNumb='$idtarjeta' AND c.dNacmDate='$idfnac'";
-//	$sql="select * from Cliente where ccliecode=".$id." and dnacmdate='$idfnac' order by ccliecode";
-	$rsl=mysqli_query($database,$sql)or die(mysqli_error($database));
-	$rs=mysqli_fetch_array($rsl);
-	//$sql2="SELECT * FROM Acumulacion_Punto WHERE cClieCode='$id' ORDER BY cClieCode";
-	//$rsl2=mysqli_query($database, $sql2)or die(mysqli_error($database));
-	//echo "tot:".$tot=mysql_num_rows($rsl2);
-	//$rs2=mysqli_fetch_array($rsl2);
-}else{
-	header("location:frm_login.php");
+    $sql = "SELECT c.cClieCode,c.sClieApel,t.nTarjNumb,c.sClieName,c.sClieAddr,c.sClieTelf,c.sClieMail,c.dNacmDate FROM CLIENTE AS c, TARJETA AS t WHERE c.cClieCode=t.cClieCode AND t.nTarjNumb='$idtarjeta' AND c.dNacmDate='$idfnac'";
+    //	$sql="select * from Cliente where ccliecode=".$id." and dnacmdate='$idfnac' order by ccliecode";
+    $rsl = mysqli_query($database, $sql) or die(mysqli_error($database));
+    $rs = mysqli_fetch_array($rsl);
+    //$sql2="SELECT * FROM Acumulacion_Punto WHERE cClieCode='$id' ORDER BY cClieCode";
+    //$rsl2=mysqli_query($database, $sql2)or die(mysqli_error($database));
+    //echo "tot:".$tot=mysql_num_rows($rsl2);
+    //$rs2=mysqli_fetch_array($rsl2);
+} else {
+    header("location:frm_login.php");
 }
 
-function formatDateTime($charCurrent,$charReplace,$date,$no_show_hour=0){
-	$date=explode($charCurrent,$date);
-	$time=explode(" ",$date[2]);
-	if($no_show_hour){
-		$newDate=$time[0].$charReplace.$date[1].$charReplace.$date[0];
-	}else{
-		$newDate=$time[0].$charReplace.$date[1].$charReplace.$date[0]." ".$time[1];
-	}
-	
-	return $newDate;
+function formatDateTime($charCurrent, $charReplace, $date, $no_show_hour = 0)
+{
+    $date = explode($charCurrent, $date);
+    $time = explode(" ", $date[2]);
+    if ($no_show_hour) {
+        $newDate = $time[0] . $charReplace . $date[1] . $charReplace . $date[0];
+    } else {
+        $newDate = $time[0] . $charReplace . $date[1] . $charReplace . $date[0] . " " . $time[1];
+    }
+
+    return $newDate;
 }
 ?>
 
 <!doctype html>
 <html lang="es">
 
-<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
     <!-- Required meta tags -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="imgclub/favicon.ico">
@@ -102,26 +103,19 @@ function formatDateTime($charCurrent,$charReplace,$date,$no_show_hour=0){
 </style>
 
 <body class="body">
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top ">
         <div class="container">
             <a class="navbar-brand" href="#">
                 <img src="imgclub/logo.png" width="80" height="70" alt="">
                 <span class="name"> Hola,
-                    <?php echo $_SESSION['session_name'];?>
+                    <?php echo $_SESSION['session_name']; ?>
                 </span>
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -129,16 +123,14 @@ function formatDateTime($charCurrent,$charReplace,$date,$no_show_hour=0){
                     <ul class="navbar-nav">
 
                         <li class="nav-item">
-                            <a class="nav-link navtitulo active" href="socios.php">DATOS DE SOCIO <span
-                                    class="sr-only"></span></a>
+                            <a class="nav-link navtitulo active" href="socios.php">DATOS DE SOCIO <span class="sr-only"></span></a>
                         </li>
-                       <!-- <li class="nav-item ">
+                        <!-- <li class="nav-item ">
                             <a class="nav-link navtitulo" href="tarjeta.php">DATOS DE TARJETA <span
                                     class="sr-only"></span></a>
                         </li>-->
                         <li class="nav-item ">
-                            <a class="nav-link navtitulo" href="renueva.php">RENUEVA TU MEMBRESÍA <span
-                                    class="sr-only"></span></a>
+                            <a class="nav-link navtitulo" href="renueva.php">RENUEVA TU MEMBRESÍA <span class="sr-only"></span></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link navtitulo" href="promosocio.php">PROMOCIONES</a>
@@ -215,27 +207,27 @@ function formatDateTime($charCurrent,$charReplace,$date,$no_show_hour=0){
                         <h5 class="textotitulo2">Información del Socio</h5>
                         <strong class="add1">Nombre del socio:</strong>
                         <p class="add" style="font-size: 12px;">
-                            <?=$_SESSION['session_nomsocio']?>
+                            <?= $_SESSION['session_nomsocio'] ?>
                         </p>
                         <strong class="add1">Dirección:</strong>
                         <p class="add" style="font-size: 12px;">
-                            <?=$rs['sClieAddr']?>
+                            <?= $rs['sClieAddr'] ?>
                         </p>
                         <strong class="add1">Teléfono:</strong>
                         <p class="add" style="font-size: 12px;">
-                            <?=$rs['sClieTelf']?>
+                            <?= $rs['sClieTelf'] ?>
                         </p>
                         <strong class="add1">Correo Electrónico:</strong>
                         <p class="add" style="font-size: 12px;">
-                            <?=$rs['sClieMail']?>
+                            <?= $rs['sClieMail'] ?>
                         </p>
                         <strong class="add1">Fecha de Nacimiento:</strong>
                         <p class="add" style="font-size: 12px;">
-                            <?=formatDateTime("-","/",$_SESSION['session_sociofnac'],1)?>
+                            <?= formatDateTime("-", "/", $_SESSION['session_sociofnac'], 1) ?>
                         </p>
                         <strong class="add1">Codigo de Socio</strong>
                         <p class="add" style="font-size: 12px;">
-                            <?=$id?>
+                            <?= $id ?>
                         </p>
 
 
@@ -248,10 +240,13 @@ function formatDateTime($charCurrent,$charReplace,$date,$no_show_hour=0){
         var _gaq = _gaq || [];
         _gaq.push(['_setAccount', 'UA-30833338-1']);
         _gaq.push(['_trackPageview']);
-        (function () {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        (function() {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
             ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
         })();
     </script>
 </body>
